@@ -9,7 +9,6 @@ function Home() {
 
   const items = useSelector(state => state.storeItems);
 
-  let count = 0;
   return (
     <>
       <h2>Home</h2>

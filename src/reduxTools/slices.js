@@ -20,7 +20,11 @@ export const storeValuesReducer = storeValuesSlice.reducer;
 
 export const storeItemsSlice = createSlice({
   name: "storeItems",
-  initialState: [],
+  initialState: [
+    { id: 1, a: 5 },
+    { id: 2, a: 20 },
+    { id: 3, a: 50 },
+  ],
   reducers: {
     add(state, action) {
       state.push(action.payload);

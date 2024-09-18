@@ -21,14 +21,21 @@ function Home() {
         Decrement
       </button>
 
-      <p>{items}</p>
+      <p>Items</p>
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>
+            {item.a}
+            <button type="button" onClick={() => dispatch(remove(item.id))}>
+              Remove Item
+            </button>
+          </li>
+        ))}
+      </ul>
       <button
         type="button"
-        onClick={() => dispatch(add({ id: 1, count: (count += 1) }))}>
+        onClick={() => dispatch(add({ id: nanoid(), a: 111 }))}>
         Add Item
-      </button>
-      <button type="button" onClick={() => dispatch(remove(1))}>
-        Remove Item
       </button>
     </>
   );

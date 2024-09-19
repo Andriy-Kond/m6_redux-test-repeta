@@ -1,13 +1,12 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import AppBar from "./AppBar";
 
 function Layout() {
   return (
     <>
       <h2>Layout</h2>
-      <nav style={{ display: "flex", gap: "10px" }}>
-        <Link to="/">Home</Link>
-        <Link to="signin">Sign In</Link>
-      </nav>
+      <AppBar />
+      <hr />
       <Outlet />
     </>
   );

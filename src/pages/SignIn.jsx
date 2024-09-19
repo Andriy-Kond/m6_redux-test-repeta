@@ -1,18 +1,18 @@
 import LoginForm from "components/LoginForm";
-import UserInfo from "components/UserInfo";
-import { useSelector } from "react-redux";
+// import UserInfo from "components/UserInfo";
+// import { useSelector } from "react-redux";
 
-function SignIn() {
-  const isSignIn = useSelector(state => state.storeSign.user.isLoggedIn);
+export function SignIn() {
+  // const isSignIn = useSelector(state => state.storeSign.user.isLoggedIn);
 
   return (
     <>
       <h2>Sign In</h2>
-
-      {!isSignIn && <LoginForm />}
-      {isSignIn && <UserInfo />}
+      <LoginForm />
+      {/* {!isSignIn && <LoginForm />} */}
+      {/* {isSignIn && <UserInfo />} */}
     </>
   );
 }
 
-export default SignIn;
+// export default SignIn;

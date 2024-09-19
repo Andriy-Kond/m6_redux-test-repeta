@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { add, decrement, increment, remove } from "reduxTools/slices";
 // import { decrement, increment } from "reduxTools/actions";
 
-function Home() {
+export function Home() {
   const dispatch = useDispatch();
   const storeValue = useSelector(state => state.storeValues.value);
 
@@ -40,4 +40,4 @@ function Home() {
   );
 }
 
-export default Home;
+// export default Home;

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkm6_redux_test_repeta=self.webpackChunkm6_redux_test_repeta||[]).push([[409],{409:(e,t,s)=>{s.r(t),s.d(t,{default:()=>a});var r=s(475),n=s(579);const a=function(){return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)("h3",{children:"This page not exist"}),(0,n.jsx)(r.N_,{to:"/",children:"Back to main page"})]})}}}]);
+//# sourceMappingURL=409.48ca66c0.chunk.js.map

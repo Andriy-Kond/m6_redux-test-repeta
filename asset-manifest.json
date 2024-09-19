@@ -1,10 +1,16 @@
 {
   "files": {
-    "main.js": "/m6_redux-test-repeta/static/js/main.9f20b077.js",
+    "main.js": "/m6_redux-test-repeta/static/js/main.560ada69.js",
+    "static/js/409.48ca66c0.chunk.js": "/m6_redux-test-repeta/static/js/409.48ca66c0.chunk.js",
+    "static/js/86.63efe786.chunk.js": "/m6_redux-test-repeta/static/js/86.63efe786.chunk.js",
+    "static/js/496.54e2ea31.chunk.js": "/m6_redux-test-repeta/static/js/496.54e2ea31.chunk.js",
     "index.html": "/m6_redux-test-repeta/index.html",
-    "main.9f20b077.js.map": "/m6_redux-test-repeta/static/js/main.9f20b077.js.map"
+    "main.560ada69.js.map": "/m6_redux-test-repeta/static/js/main.560ada69.js.map",
+    "409.48ca66c0.chunk.js.map": "/m6_redux-test-repeta/static/js/409.48ca66c0.chunk.js.map",
+    "86.63efe786.chunk.js.map": "/m6_redux-test-repeta/static/js/86.63efe786.chunk.js.map",
+    "496.54e2ea31.chunk.js.map": "/m6_redux-test-repeta/static/js/496.54e2ea31.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.9f20b077.js"
+    "static/js/main.560ada69.js"
   ]
 }

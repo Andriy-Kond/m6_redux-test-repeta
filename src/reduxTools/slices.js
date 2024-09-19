@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { value: 0 };
+const storeInitialState = { value: 0 };
 
 export const storeValuesSlice = createSlice({
   name: "storeValues",
-  initialState,
+  initialState: storeInitialState,
   reducers: {
     increment(state, action) {
       state.value += action.payload;
@@ -38,3 +38,43 @@ export const storeItemsSlice = createSlice({
 
 export const { add, remove } = storeItemsSlice.actions;
 export const storeItemsReducer = storeItemsSlice.reducer;
+
+export const signInSlice = createSlice({
+  name: "signIn",
+
+  initialState: {
+    user: {
+      userName: "",
+      loginDate: "",
+      isLoggedIn: false,
+    },
+  },
+
+  reducers: {
+    logIn: {
+      reducer(state, action) {
+        state.user = action.payload;
+      },
+      prepare(userName, loginDate) {
+        return {
+          payload: {
+            userName,
+            loginDate,
+            isLoggedIn: true,
+          },
+        };
+      },
+    },
+
+    logOut(state) {
+      state.user = {
+        userName: "",
+        loginDate: "",
+        isLoggedIn: false,
+      };
+    },
+  },
+});
+
+export const { logIn, logOut } = signInSlice.actions;
+export const signInReducer = signInSlice.reducer;

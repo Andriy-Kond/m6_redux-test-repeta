@@ -1,7 +1,7 @@
 import Layout from "components/Layout";
 import Home from "pages/Home";
-import MyRouter from "pages/MyRouter";
 import NotFoundPage from "pages/NotFoundPage";
+import SignIn from "pages/SignIn";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="router" element={<MyRouter />} />
+          <Route path="signin" element={<SignIn />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

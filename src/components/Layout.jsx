@@ -6,7 +6,7 @@ function Layout() {
       <h2>Layout</h2>
       <nav style={{ display: "flex", gap: "10px" }}>
         <Link to="/">Home</Link>
-        <Link to="router">Router</Link>
+        <Link to="signin">Sign In</Link>
       </nav>
       <Outlet />
     </>

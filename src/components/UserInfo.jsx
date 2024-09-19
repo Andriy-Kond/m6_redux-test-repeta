@@ -1,3 +1,4 @@
+import { useLogoutRedirect } from "hooks/useLogoutRedirect";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logOut } from "reduxTools/slices";
@@ -8,11 +9,14 @@ function UserInfo() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const handleLogOut = () => {
     dispatch(logOut());
-
     navigate("/signin", { replace: true });
+    // redirect("/signin");
   };
+
+  useLogoutRedirect();
 
   return (
     <div>

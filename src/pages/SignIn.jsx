@@ -2,7 +2,7 @@ import LoginForm from "components/LoginForm";
 // import UserInfo from "components/UserInfo";
 // import { useSelector } from "react-redux";
 
-export function SignIn() {
+function SignIn() {
   // const isSignIn = useSelector(state => state.storeSign.user.isLoggedIn);
 
   return (
@@ -15,4 +15,4 @@ export function SignIn() {
   );
 }
 
-// export default SignIn;
+export default SignIn;

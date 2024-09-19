@@ -1,6 +1,6 @@
 import { useLogoutRedirect } from "hooks/useLogoutRedirect";
 
-export function DashboardPage() {
+function DashboardPage() {
   useLogoutRedirect();
 
   return (
@@ -9,3 +9,5 @@ export function DashboardPage() {
     </>
   );
 }
+
+export default DashboardPage;

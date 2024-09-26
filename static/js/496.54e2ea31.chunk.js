@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkm6_redux_test_repeta=self.webpackChunkm6_redux_test_repeta||[]).push([[496],{496:(e,r,s)=>{s.r(r),s.d(r,{default:()=>c});var t=s(43),n=s(456),a=s(216);var u=s(579);const c=function(){return(()=>{const e=(0,a.Zp)(),r=(0,n.d4)((e=>e.storeSign.user.isLoggedIn));(0,t.useEffect)((()=>{r||e("/signin",{replace:!0})}),[r,e])})(),(0,u.jsx)(u.Fragment,{children:(0,u.jsx)("h2",{children:"Dashboard Page"})})}}}]);
-//# sourceMappingURL=496.54e2ea31.chunk.js.map

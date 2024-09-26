@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import AppBar from "./AppBar";
+import { Suspense } from "react";
 
 function Layout() {
   return (
@@ -7,7 +8,10 @@ function Layout() {
       <h2>Layout</h2>
       <AppBar />
       <hr />
-      <Outlet />
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 }

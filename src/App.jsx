@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { lazy } from "react";
 import Layout from "components/Layout";
 
 // Якщо не потрібно використовувати lazy:
@@ -27,24 +27,37 @@ import Home from "pages/Home";
 //   }),
 // );
 
-// Якщо default export, або через index.js: export { default as NotFoundPage } from "./NotFoundPage";:
-const NotFoundPage = lazy(() => import("pages/NotFoundPage"));
-const SignIn = lazy(() => import("pages/SignIn"));
-const DashboardPage = lazy(() => import("pages/DashboardPage"));
+// // Якщо default export:
+// const NotFoundPage = lazy(() => import("pages/NotFoundPage"));
+// const SignIn = lazy(() => import("pages/SignIn"));
+// const DashboardPage = lazy(() => import("pages/DashboardPage"));
+
+// оптимізація іменованих імпортів
+const lazyImport = componentName => {
+  return lazy(() =>
+    import("pages").then(module => ({
+      ...module,
+      default: module[componentName],
+    })),
+  );
+};
+
+const SignIn = lazyImport("SignIn");
+const DashboardPage = lazyImport("DashboardPage");
+const NotFoundPage = lazyImport("NotFoundPage");
 
 function App() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="signin" element={<SignIn />} />
-            <Route path="dashboard" element={<DashboardPage />} />
-          </Route>
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="signin" element={<SignIn />} />
+          <Route path="dashboard" element={<DashboardPage />} />
+        </Route>
+
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </>
   );
 }

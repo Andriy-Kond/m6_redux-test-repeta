@@ -6,7 +6,7 @@
 // І потім зробити імпорт наступного зразку:
 // import { DashboardPage, Home, NotFoundPage, SignIn } from "pages";
 
-// * Якщо потрібно імпортувати компоненти через import lazy, то для простоти необхідно, щоби експорти були як дефолтні:
+// * працює з import lazy лише через default: module[ім'я компоненту]
 export { default as Home } from "./Home";
 export { default as NotFoundPage } from "./NotFoundPage";
 export { default as SignIn } from "./SignIn";
